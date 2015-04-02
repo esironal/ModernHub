@@ -22,6 +22,6 @@
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="pw.bastiaan.github.ui.commit.CommitDiffListFragment" />
+        class="com.github.mobile.ui.commit.CommitDiffListFragment" />
 
 </FrameLayout>

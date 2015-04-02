@@ -28,14 +28,14 @@
         android:background="?attr/colorPrimary"
         android:id="@+id/toolbar" />
 
-    <pw.bastiaan.github.ui.SlidingTabLayout
+    <com.github.mobile.ui.SlidingTabLayout
         android:layout_below="@id/toolbar"
         android:id="@+id/sliding_tabs_layout"
         android:background="@color/primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <pw.bastiaan.github.ui.ViewPager
+    <com.github.mobile.ui.ViewPager
         android:id="@+id/vp_pages"
         android:layout_below="@id/sliding_tabs_layout"
         android:layout_width="match_parent"

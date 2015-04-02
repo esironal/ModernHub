@@ -32,6 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        class="pw.bastiaan.github.ui.issue.SearchIssueListFragment" />
+        class="com.github.mobile.ui.issue.SearchIssueListFragment" />
 
 </RelativeLayout>

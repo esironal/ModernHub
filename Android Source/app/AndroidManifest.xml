@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pw.bastiaan.github"
-    android:installLocation="auto">
+    package="com.github.mobile"
+	android:installLocation="auto">
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -26,7 +26,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.GitHub">
         <activity
-            android:name="pw.bastiaan.github.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/Theme.GitHub.NavigationDrawer"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true">
@@ -41,7 +41,7 @@
                 android:value=".ui.search.SearchActivity" />
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.gist.CreateGistActivity"
+            android:name=".ui.gist.CreateGistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -52,11 +52,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.IssueBrowseActivity"
+            android:name=".ui.issue.IssueBrowseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.repo.issues.VIEW" />
+                <action android:name="com.github.mobile.repo.issues.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -66,25 +66,25 @@
                 android:value=".ui.issue.IssueSearchActivity" />
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.EditIssuesFilterActivity"
+            android:name=".ui.issue.EditIssuesFilterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.repo.issues.filter.VIEW" />
+                <action android:name="com.github.mobile.repo.issues.filter.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.EditIssueActivity"
+            android:name=".ui.issue.EditIssueActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.repo.issues.edit.VIEW" />
+                <action android:name="com.github.mobile.repo.issues.edit.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.search.SearchActivity"
+            android:name=".ui.search.SearchActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true"
             android:label="@string/search_title"
@@ -98,84 +98,84 @@
                 android:resource="@xml/searchable_repos_users" />
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.FiltersViewActivity"
+            android:name=".ui.issue.FiltersViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.repo.issues.filters.VIEW" />
+                <action android:name="com.github.mobile.repo.issues.filters.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.gist.GistsViewActivity"
+            android:name=".ui.gist.GistsViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.gists.VIEW" />
+                <action android:name="com.github.mobile.gists.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.gist.GistFilesViewActivity"
+            android:name=".ui.gist.GistFilesViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.gist.files.VIEW" />
+                <action android:name="com.github.mobile.gist.files.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.CreateCommentActivity"
+            android:name=".ui.issue.CreateCommentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.issue.comment.create.VIEW" />
+                <action android:name="com.github.mobile.issue.comment.create.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.EditCommentActivity"
+            android:name=".ui.issue.EditCommentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.issue.comment.edit.VIEW" />
+                <action android:name="com.github.mobile.issue.comment.edit.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.gist.CreateCommentActivity"
+            android:name=".ui.gist.CreateCommentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.gist.comment.create.VIEW" />
+                <action android:name="com.github.mobile.gist.comment.create.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.gist.EditCommentActivity"
+            android:name=".ui.gist.EditCommentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.gist.comment.edit.VIEW" />
+                <action android:name="com.github.mobile.gist.comment.edit.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.commit.CreateCommentActivity"
+            android:name=".ui.commit.CreateCommentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.commit.comment.create.VIEW" />
+                <action android:name="com.github.mobile.commit.comment.create.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.repo.RepositoryViewActivity"
+            android:name=".ui.repo.RepositoryViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.repo.VIEW" />
+                <action android:name="com.github.mobile.repo.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -185,37 +185,37 @@
                 android:value=".ui.issue.IssueSearchActivity" />
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.repo.RepositoryContributorsActivity"
+            android:name=".ui.repo.RepositoryContributorsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.repo.contributors.VIEW" />
+                <action android:name="com.github.mobile.repo.contributors.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.user.UserViewActivity"
+            android:name=".ui.user.UserViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.user.VIEW" />
+                <action android:name="com.github.mobile.user.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.IssuesViewActivity"
+            android:name=".ui.issue.IssuesViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.issues.VIEW" />
+                <action android:name="com.github.mobile.issues.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <service
-            android:name="pw.bastiaan.github.accounts.AccountAuthenticatorService"
+            android:name=".accounts.AccountAuthenticatorService"
             android:exported="false"
             android:process=":auth">
             <intent-filter>
@@ -228,7 +228,7 @@
         </service>
 
         <activity
-            android:name="pw.bastiaan.github.accounts.LoginActivity"
+            android:name=".accounts.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true">
 
@@ -238,7 +238,7 @@
             -->
         </activity>
         <activity
-            android:name="pw.bastiaan.github.accounts.TwoFactorAuthActivity"
+            android:name=".accounts.TwoFactorAuthActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true">
 
@@ -248,7 +248,7 @@
             -->
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.user.UriLauncherActivity"
+            android:name=".ui.user.UriLauncherActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true">
             <intent-filter>
@@ -289,7 +289,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.issue.IssueSearchActivity"
+            android:name=".ui.issue.IssueSearchActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true"
             android:label="@string/search_title"
@@ -303,45 +303,45 @@
                 android:resource="@xml/searchable_issues" />
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.commit.CommitCompareViewActivity"
+            android:name=".ui.commit.CommitCompareViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/commit_compare_title">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.commits.compare.VIEW" />
+                <action android:name="com.github.mobile.commits.compare.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.commit.CommitViewActivity"
+            android:name=".ui.commit.CommitViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.commits.VIEW" />
+                <action android:name="com.github.mobile.commits.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.commit.CommitFileViewActivity"
+            android:name=".ui.commit.CommitFileViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.commit.file.VIEW" />
+                <action android:name="com.github.mobile.commit.file.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="pw.bastiaan.github.ui.ref.BranchFileViewActivity"
+            android:name=".ui.ref.BranchFileViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="pw.bastiaan.github.branch.file.VIEW" />
+                <action android:name="com.github.mobile.branch.file.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <service
-            android:name="pw.bastiaan.github.sync.SyncAdapterService"
+            android:name=".sync.SyncAdapterService"
             android:exported="false"
             android:process=":repos">
             <intent-filter>
@@ -354,18 +354,18 @@
         </service>
 
         <provider
-            android:name="pw.bastiaan.github.sync.ContentProviderAdapter"
-            android:authorities="pw.bastiaan.sync"
+            android:name=".sync.ContentProviderAdapter"
+            android:authorities="com.github.sync"
             android:exported="false"
             android:label="GitHub"
             android:syncable="true" />
         <provider
-            android:name="pw.bastiaan.github.ui.search.RepositorySearchSuggestionsProvider"
-            android:authorities="pw.bastiaan.search.suggest.recent.repos"
+            android:name=".ui.search.RepositorySearchSuggestionsProvider"
+            android:authorities="com.github.search.suggest.recent.repos"
             android:exported="false" />
         <provider
-            android:name="pw.bastiaan.github.ui.issue.IssueSearchSuggestionsProvider"
-            android:authorities="pw.bastiaan.search.suggest.recent.issues"
+            android:name=".ui.issue.IssueSearchSuggestionsProvider"
+            android:authorities="com.github.search.suggest.recent.issues"
             android:exported="false" />
     </application>
 

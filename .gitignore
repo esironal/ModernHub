@@ -24,3 +24,6 @@ proguard/
 
 # Log Files
 *.log
+
+# Image DB
+Thumbs.db
