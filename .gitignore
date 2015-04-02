@@ -25,5 +25,6 @@ proguard/
 # Log Files
 *.log
 
-# Image DB
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
